@@ -1,16 +1,7 @@
-// import { defineConfig } from 'vite'
-// import react from '@vitejs/plugin-react'
+interface ImportMetaEnv {
+  readonly VITE_API_URL: string;
+}
 
-// // https://vite.dev/config/
-// export default defineConfig({
-//   plugins: [react()],
-// })
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-
-export default defineConfig({
-  plugins: [react()],
-  css: {
-    postcss: "./postcss.config.js",
-  },
-});
+interface ImportMeta {
+  readonly env: ImportMetaEnv;
+}
